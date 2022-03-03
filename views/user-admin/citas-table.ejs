@@ -1,0 +1,72 @@
+<head>
+        <title>Lucky7Tattoo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/admin/dashboard">Admin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="btn btn-dark nav-link" href="/admin/users">Usuarios</a>
+                        <a class="btn btn-dark nav-link" href="/admin/citas">Citas <span
+                                class="badge bg-secondary">Nueva Cita</span></a>
+                        <a class="btn btn-dark nav-link" href="/admin/product">Productos</a>
+                        <a class="btn btn-dark nav-link" href="/">Home</a>
+    
+                    </div>
+                </div>
+            </div>
+        </nav>
+<div class="table-data">
+        <h2><i class="fa fa-align-justify" aria-hidden="true">Tabla Citas</i></h2>
+        <table class="table" border="1">
+            <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Usuario</th>
+            <th>Tatuador</th>
+            <th>Servicio</th>
+            <th>Status</th>
+            <th>Observaciones</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <%
+            if(citaData.length!=0){
+                citaData.forEach(function(citadata){
+            %>
+        <tr>
+            <td><%= citadata.id %></td>
+            <td><%= citadata.fecha %></td>
+            <td><%= citadata.hora %></td>
+            <td><%= citadata.usuario %></td>
+            <td><%= citadata.tatuador %></td>
+            <td><%= citadata.servicio %></td>
+            <td><%= citadata.status %></td>
+            <td><%= citadata.observaciones %></td>
+            <td><a class="btn btn-outline-warning" href="/admin/citas/edit/<%= citadata.id %>">Edit</a></td>
+            <td><a class="btn btn-warning" href="/admin/citas/delete/<%= citadata.id %>">Delete</a></td>
+        </tr>
+        <% }) %>
+        <% } else{ %>
+        <tr>
+            <td colspan="10">No Data Found</td>
+        </tr>
+        <% } %>
+    </table>
+    
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</html>

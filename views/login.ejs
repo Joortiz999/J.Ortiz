@@ -1,0 +1,19 @@
+<%- include('partials/_header') -%>
+<main class="page login-page">
+    <section class="clean-block clean-form dark" style="color: rgb(33, 37, 41);background: rgb(0,0,0);">
+        <div class="container" style="font-family: UnifrakturMaguntia, cursive;">
+            <div class="block-heading" style="color: #F5D10D;">
+                <h1 style="/*color: #f5d10d;*/font-family: UnifrakturMaguntia, cursive;/*border-color: #f5d10d;*/">Log
+                    In</h1>
+            </div>
+            <form action="/login" method="POST">
+                <div class="mb-3"><label class="form-label" for="user" style="color: rgb(33, 37, 41);font-size: 25px;font-family: UnifrakturMaguntia, cursive;">Username</label><input class="form-control" style="font-family: Montserrat, sans-serif" type="text" name="username" placeholder="Username" id="username" autofocus required></div>
+                <div class="mb-3"><label class="form-label" for="pass" style="font-size: 25px;font-family: UnifrakturMaguntia, cursive;">Password</label><input class="form-control" style="font-family: Montserrat, sans-serif" type="password" name="password" placeholder="Password" id="password" required></div>
+                <div class="mb-3">
+                </div>
+                <button class="btn btn-primary" type="submit value="Login" style="background: rgb(245,209,13);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 20px;text-align: center;">Log In</button><a href="/signup" class="btn btn-primary" style="background: rgb(245,209,13);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 20px;text-align: center;">Sign Up</a>
+            </form>
+        </div>
+    </section>
+</main>
+<%- include('partials/_footer') -%>

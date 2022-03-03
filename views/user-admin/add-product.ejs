@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lucky7Tattoo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/admin/dashboard">Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="btn btn-dark nav-link" href="/admin/users">Usuarios</a>
+                    <a class="btn btn-dark nav-link" href="/admin/citas">Citas <span
+                            class="badge bg-secondary">Nueva Cita</span></a>
+                    <a class="btn btn-dark nav-link" href="/admin/product">Productos</a>
+                    <a class="btn btn-dark nav-link" href="/">Home</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="page add-product-page">
+        <section class="clean-block clean-form">
+            <div class="container">
+                <form action="/admin/product/add-product" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="mb-3">
+                        <label class="form-label" for="producto">Nombre Producto:</label>
+                        <input type="text" class="form-control" name="producto" id="producto"></input>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="precio">Precio:</label>
+                        <input type="text" class="form-control" name="precio" id="precio"></input>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="descripcion">Descripcion:</label>
+                        <input type="text" class="form-control" name="descripcion" id="descripcion"></input>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label" for="imagen">Imagen:</label>
+                        <div class="mb-3">
+                            <input type="file" class="form-control" name="imagen" accept="image/*">
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-outline-dark">Add Product</button> <a class="btn btn-outline-dark" href="/admin/product">Go Back</a>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</html>

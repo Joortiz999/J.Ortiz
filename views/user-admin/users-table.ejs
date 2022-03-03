@@ -1,0 +1,67 @@
+<head>
+    <title>Lucky7Tattoo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/admin/dashboard">Admin</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="btn btn-dark nav-link" href="/admin/users">Usuarios</a>
+                    <a class="btn btn-dark nav-link" href="/admin/citas">Citas <span
+                            class="badge bg-secondary">Nueva Cita</span></a>
+                    <a class="btn btn-dark nav-link" href="/admin/product">Productos</a>
+                    <a class="btn btn-dark nav-link" href="/">Home</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="table-data table-responsive">
+        <h2><i class="fa fa-align-justify" aria-hidden="true">Tabla Usuarios</i></h2>
+        <table class="table" border="1">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Middlename</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <%
+            if(userData.length!=0){
+            userData.forEach(function(userdata){
+            %>
+            <tr>
+                <td><%= userdata.id %></td>
+                <td><%= userdata.name %></td>
+                <td><%= userdata.middlename %></td>
+                <td><%= userdata.phone %></td>
+                <td><%= userdata.email %></td>
+                <td><%= userdata.username %></td>
+                <td><a class="btn btn-outline-warning" href="/admin/users/edit/<%= userdata.id %>">Edit</a></td>
+                <td><a class="btn btn-warning" href="/admin/users/delete/<%= userdata.id %>">Delete</a></td>
+            </tr>
+            <% }) %>
+            <% } else{ %>
+            <tr>
+                <td colspan="8">No Data Found</td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</html>
