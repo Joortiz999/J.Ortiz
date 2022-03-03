@@ -1,0 +1,69 @@
+<%- include('partials/_header') -%>
+<main class="page catalog-page">
+    <section class="clean-block clean-catalog dark" style="background: rgb(0,0,0);color: rgb(0,0,0);">
+        <div class="container">
+            <div class="block-heading">
+                <h1 class="display-2" style="font-family: UnifrakturMaguntia, cursive;color: #F5D10D;">Catalog Page</h1>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="col" style="font-size: 16px;">
+                        <div class="d-none d-md-block">
+                            <div class="filters" style="font-family: Montserrat, sans-serif;text-align: left;">
+                                <div class="filter-item">
+                                    <h3 style="font-family: Montserrat, sans-serif;">Categorias</h3>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="font-family: Montserrat, sans-serif;">Targeta de regalo</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2" style="font-family: Montserrat, sans-serif;">Kit de tintas</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-md-none"><a class="btn btn-link d-md-none filter-collapse" data-bs-toggle="collapse" aria-expanded="false" aria-controls="filters" href="#filters" role="button" style="color: rgb(0,0,0);text-align: justify;border-style: none;">FILTRO<i class="icon-arrow-down filter-caret"></i></a>
+                            <div class="collapse" id="filters">
+                                <div class="filters" style="font-family: Montserrat, sans-serif;text-align: left;">
+                                    <div class="filter-item">
+                                        <h3 style="font-family: Montserrat, sans-serif;">Categorias</h3>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="font-family: Montserrat, sans-serif;">Targeta de regalo</label></div>
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2" style="font-family: Montserrat, sans-serif;">Kit de tintas</label></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="products">
+                            <div class="row g-0 justify-content-center" style="font-size: 16px;">
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="clean-product-item" style="font-family: Montserrat, sans-serif;">
+                                        <div class="image"><a href="/product-page-cuidado-tats"><img class="img-fluid d-block mx-auto" src="resources/assets/img/WhatsApp%20Image%202021-04-13%20at%204.59.44%20PM.jpeg?h=a24d070a036c9031737b447d19a74176"></a></div>
+                                        <div class="product-name" style="font-family: Montserrat, sans-serif;"><a href="/product-page-targeta" style="font-family: Montserrat, sans-serif;color: rgb(0,0,0);text-align: justify;">Kit de Cuidado de Tatuajes</a></div>
+                                        <div class="text-center about">
+                                            <div class="text-end price">
+                                                <h3 style="font-family: Montserrat, sans-serif;">$100</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6 col-lg-4" style="font-family: Montserrat, sans-serif;">
+                                    <div class="clean-product-item" style="font-family: Montserrat, sans-serif;">
+                                        <div class="image"><a href="/product-page-targeta"><img class="img-fluid d-block mx-auto" src="resources/assets/img/Giftcard.jpg?h=2bc59d5c216a737fb8abcd4c4cb7c195"></a></div>
+                                        <div class="product-name" style="font-family: Montserrat, sans-serif;"><a style="font-family: Montserrat, sans-serif;color: rgb(0,0,0);">Targeta de Regalo</a></div>
+                                        <div class="d-lg-flex justify-content-lg-start about">
+                                            <div class="rating"></div>
+                                            <div class="price">
+                                                <h3 class="text-start" style="font-family: Montserrat, sans-serif;">$100</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav>
+                                <ul class="pagination"></ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<%- include('partials/_footer') -%>
