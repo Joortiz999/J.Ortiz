@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Lucky7Tattoo</title>
+    <link rel="stylesheet" href="/resources/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=UnifrakturCook:">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia">
+    <link rel="stylesheet" href="/resources/assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/resources/assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/resources/assets/css/Article-List.css">
+    <link rel="stylesheet" href="/resources/assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="/resources/assets/css/styles.min.css?h=18da26da66224dc7e0365acaa8581204">
+    <link rel="stylesheet" href="/resources/assets/css/Map-Clean.css">
+    <link rel="stylesheet" href="/resources/assets/css/Responsive-Image-Grid.css">
+    <link rel="stylesheet" href="/resources/assets/css/Team-Boxed.css">
+    <link rel="stylesheet" href="/resources/assets/css/vanilla-zoom.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <style>
+        body {
+            font-family: 'Crimson Pro', serif;
+            font-size: 48px;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+</head>
+
+<body style="color: rgb(0,0,0);">
+    <nav class="navbar navbar-light navbar-expand-md bg-dark clean-navbar"
+        style="background: rgb(0,0,0);color: rgb(0,0,0);height: 60px;border-color: rgb(0,0,0);">
+        <div class="container"><a class="navbar-brand logo" href="/"
+                style="font-family: UnifrakturMaguntia, cursive;color: #F5D10D;font-size: 30px;">Lucky7Tattoo</a><button
+                data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span
+                    class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="gallery"
+                            style="color: #F5D10D;font-family: Montserrat, sans-serif;">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="catalog-page"
+                            style="color: #F5D10D;font-family: Montserrat, sans-serif;">Shop</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="citas"
+                                style="color: #F5D10D;font-family: Montserrat, sans-serif;">Citas</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq"
+                            style="color: #F5D10D;font-family: Montserrat, sans-serif;">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact-us"
+                            style="color: #F5D10D;font-family: Montserrat, sans-serif;">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" title="Logout" href="/logout"
+                            style="color: #F5D10D;font-family: Montserrat, sans-serif;"><%= name %></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="page contact-us-page">
+        <section class="clean-block clean-form dark" style="color: rgb(33, 37, 41);background: rgb(0,0,0);">
+            <div class="container">
+                <div class="block-heading">
+                    <h2 style="color: #F5D10D;font-family: UnifrakturMaguntia, cursive;">Contact Us</h2>
+                </div>
+                <form method="POST" action="send">
+                    <div class="mb-3"><label class="form-label" for="name" style="color: rgb(33, 37, 41);font-size: 20px;font-family: UnifrakturMaguntia, cursive;">Name</label><input class="form-control" type="text" id="name" name="name" value="<%=name%> <%=middlename%>"></div>
+                    <div class="mb-3"><label class="form-label" for="subject" style="font-size: 20px;font-family: UnifrakturMaguntia, cursive;">Subject</label><input class="form-control" type="text" id="subject" name="subject"></div>
+                    <div class="mb-3"><label class="form-label" for="email" style="font-size: 20px;font-family: UnifrakturMaguntia, cursive;">Email</label><input class="form-control" type="email" id="email" name="email" value="<%=email%>" required></div>
+                    <div class="mb-3"><label class="form-label" for="message" style="font-size: 20px;font-family: UnifrakturMaguntia, cursive;">Message</label><textarea class="form-control" id="message" name="message"></textarea></div>
+                    <div class="text-center mb-3"><button class="btn btn-primary" type="submit" style="background: rgb(245,209,13);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 20px;text-align: center;">Send</button></div>
+                </form>
+            </div>
+        </section>
+    </main><!-- Start: Footer Basic -->
+    <%- include('../partials/_footer') -%>

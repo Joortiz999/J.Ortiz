@@ -1,0 +1,40 @@
+<%- include('partials/_header') -%>
+    <main class="page signup-page">
+        <section class="clean-block clean-form dark" style="color: rgb(33, 37, 41);background: rgb(0,0,0);">
+            <div class="container" style="font-family: UnifrakturMaguntia, cursive;">
+                <div class="block-heading" style="color: #F5D10D;">
+                    <h1 style="font-family: UnifrakturMaguntia, cursive;">Sign Up</h1>
+                </div>
+                <form action="/signup" method="POST">
+                    <div class="mb-3">
+                        <label class="form-label" for="name" style="font-family: UnifrakturMaguntia, cursive;font-size: 20px;">Nombre</label>
+                        <input class="form-control item" style="font-family: Montserrat, sans-serif" type="text" id="name" name="name" placeholder="Nombre" required tabindex="1" autofocu>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="middlename" style="font-family: UnifrakturMaguntia, cursive;font-size: 20px;">Apellido</label>
+                        <input class="form-control item" style="font-family: Montserrat, sans-serif" type="text" id="middlename" name="middlename" placeholder="Apellido" required tabindex="2">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="phone" style="font-family: UnifrakturMaguntia, cursive;font-size: 20px;">Teléfono</label>
+                        <input class="form-control item" style="font-family: Montserrat, sans-serif" type="text" id="phone" name="phone" placeholder="Teléfono" required tabindex="3">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email" style="font-family: UnifrakturMaguntia, cursive;font-size: 20px;">Email</label>
+                        <input class="form-control item" style="font-family: Montserrat, sans-serif" type="email" id="email-1" name="email" placeholder="Email" required tabindex="4">
+                    </div>
+                    <div class="mb-3">
+                            <label class="form-label" for="username" style="font-family: UnifrakturMaguntia, cursive;font-size: 20px;">Usuario</label>
+                            <input class="form-control item" style="font-family: Montserrat, sans-serif" type="text" id="username" name="username" placeholder="Nombre de Usuario" required tabindex="5">
+                        </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="password" style="font-family: UnifrakturMaguntia, cursive;font-size: 20px;">Password</label>
+                        <input class="form-control" style="font-family: Montserrat, sans-serif" type="password" id="password" name="password" placeholder="Password" required tabindex="6">
+                    </div>
+                    <div class="mb-3">
+                            <button class="btn btn-primary" type="submit" value="Save" style="background: rgb(245,209,13);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 20px;text-align: center;">Sign Up</button><a href="/" class="btn btn-primary" style="background: rgb(245,209,13);color: rgb(0,0,0);font-family: Montserrat, sans-serif;font-size: 20px;text-align: center;">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/_footer') -%>

@@ -1,0 +1,69 @@
+<head>
+        <title>Lucky7Tattoo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/admin/dashboard">Admin</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="btn btn-dark nav-link" href="/admin/users">Usuarios</a>
+                        <a class="btn btn-dark nav-link" href="/admin/citas">Citas <span
+                                class="badge bg-secondary">Nueva Cita</span></a>
+                        <a class="btn btn-dark nav-link" href="/admin/product">Productos</a>
+                        <a class="btn btn-dark nav-link" href="/">Home</a>
+    
+                    </div>
+                </div>
+            </div>
+        </nav>
+<div class="table-data">
+        <h2><i class="fa fa-align-justify" aria-hidden="true">Tabla Productos</i></h2>
+        <div style="padding: 2%;">
+        <a class="btn btn-warning" href="/admin/product/add-product">Add Product</a>
+    </div>
+        <table class="table" border="1">
+            <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+
+        <%
+            if(productData.length!=0){
+                productData.forEach(function(productdata){
+            %>
+        <tr>
+            <td><%= productdata.id %></td>
+            <td><%= productdata.producto %></td>
+            <td>RD$: <%= productdata.precio %></td>
+            <td><%= productdata.descripcion %></td>
+            <td><%= productdata.imagen %></td>
+            <td><a class="btn btn-outline-warning" href="/admin/product/view/<%= productdata.id %>">View</a></td>
+            <td><a class="btn btn-warning" href="/admin/product/delete/<%= productdata.id %>">Delete</a></td>
+        </tr>
+        <% }) %>
+        <% } else{ %>
+        <tr>
+            <td colspan="5">No Data Found</td>
+            <td colspan="2"><a href="/admin/product/add-product">Add Product</a></td>
+        </tr>
+        <% } %>
+    </table>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</html>
