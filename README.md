@@ -25,3 +25,10 @@ Also need to add a 'uploaded' folder inside your public folder.
 npm run dev
 
 And you are good to go just open your browser at http://localhost:3000
+
+# You can also view this proyect deployed in heroku at: https://lucky7seven.herokuapp.com/
+# and test out admin features by Loging in Admin User.
+
+# Admin User: 
+Username: Admin 
+Password: root
