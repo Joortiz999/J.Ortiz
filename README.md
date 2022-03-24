@@ -26,8 +26,7 @@ npm run dev
 
 And you are good to go just open your browser at http://localhost:3000
 
-# You can also view this proyect deployed in heroku at: https://lucky7seven.herokuapp.com/
-# and test out admin features by Loging in Admin User.
+# You can also view this proyect deployed in heroku at: https://lucky7seven.herokuapp.com/ and test out admin features by Loging in Admin User.
 
 # Admin User: 
 Username: Admin 
